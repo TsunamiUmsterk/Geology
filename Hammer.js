@@ -8,12 +8,13 @@ class Hammer {
        this.body = Bodies.rectangle(x, y, width, height, options);
        this.width = width;
        this.height = height;
-       this.body.position.x = MouseX;
-       this.body.position.y = MouseY;
-       
+
+
        World.add(world, this.body);
      }
      display(){
+      this.body.position.x = mouseX;
+      this.body.position.y = mouseY;
       var pos =this.body.position;
        var angle = this.body.angle;
        push();
